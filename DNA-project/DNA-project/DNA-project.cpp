@@ -1,10 +1,6 @@
 #include "Main.h"
 
 
-
-
-
-
 int main() {
     const int screenWidth = 800;
     const int screenHeight = 450;

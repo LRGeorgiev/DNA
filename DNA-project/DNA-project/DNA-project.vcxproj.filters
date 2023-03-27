@@ -22,5 +22,11 @@
     <ClInclude Include="Questions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="askQuestion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="checkAnswer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

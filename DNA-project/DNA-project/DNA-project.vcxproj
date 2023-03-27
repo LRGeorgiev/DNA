@@ -133,8 +133,10 @@
     <ClCompile Include="DNA-project.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Questions.h" />
+    <ClInclude Include="askQuestion.h" />
+    <ClInclude Include="checkAnswer.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="Questions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
