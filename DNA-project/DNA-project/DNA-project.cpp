@@ -1,69 +1,48 @@
-#include "raylib.h"
+#include "Main.h"
 
-int main(void)
-{
-    // Initialization
+
+
+
+
+
+int main() {
     const int screenWidth = 800;
     const int screenHeight = 450;
+    InitWindow(screenWidth, screenHeight, "Biology Quiz Game");
 
-    InitWindow(screenWidth, screenHeight, "DNA");
     SetTargetFPS(60);
 
-    // Main menu variables
-    int menuOption = 0;
-    const char* menuOptions[] = { "Play", "Options", "Exit" };
-
-    while (!WindowShouldClose()) // Main game loop
-    {
-        // Update
-        if (IsKeyPressed(KEY_UP)) menuOption--;
-        if (IsKeyPressed(KEY_DOWN)) menuOption++;
-        if (menuOption < 0) menuOption = 2;
-        if (menuOption > 2) menuOption = 0;
-
-        if (IsKeyPressed(KEY_ENTER))
-        {
-            switch (menuOption)
-            {
-            case 0:
-                // Open new game window
-                CloseWindow(); // Close main menu window
-                InitWindow(screenWidth, screenHeight, "Play");
-                SetTargetFPS(60);
-                // Add game logic here...
-                break;
-            case 1:
-                // Open options menu
-                break;
-            case 2:
-                // Exit game
-                CloseWindow();
-                break;
-            }
-        }
-
-        // Draw
+    while (!WindowShouldClose()) {
         BeginDrawing();
         ClearBackground(RAYWHITE);
 
-        DrawText("DNA", screenWidth / 2 - MeasureText("DNA", 40) / 2, screenHeight / 4, 40, MAROON);
+        askQuestion(questions[currentQuestionIndex]);
 
-        for (int i = 0; i < 3; i++)
-        {
-            if (i == menuOption)
-            {
-                DrawText(TextFormat("> %s <", menuOptions[i]), screenWidth / 2 - MeasureText(menuOptions[i], 20) / 2, screenHeight / 2 + 50 * i, 20, DARKGRAY);
-            }
-            else
-            {
-                DrawText(menuOptions[i], screenWidth / 2 - MeasureText(menuOptions[i], 20) / 2, screenHeight / 2 + 50 * i, 20, GRAY);
+        if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
+            int mouseX = GetMouseX();
+            int mouseY = GetMouseY();
+
+            for (int i = 0; i < MAX_OPTIONS; i++) {
+
+                if (mouseX >= 50 && mouseX <= 50 + MeasureText(questions[currentQuestionIndex].options[i], 20) &&
+                    mouseY >= 100 + i * 50 && mouseY <= 100 + i * 50 + 20) {
+
+
+
+                    bool result = checkAnswer(questions[currentQuestionIndex], i + 1);
+                    currentQuestionIndex++;
+                    if (currentQuestionIndex >= MAX_QUESTIONS) {
+                        currentQuestionIndex = 0;
+                    }
+                }
             }
         }
+
+        DrawText(TextFormat("Score: %d", currentScore), screenWidth - 150, 20, 20, BLACK);
 
         EndDrawing();
     }
 
-    // De-Initialization
     CloseWindow();
 
     return 0;
