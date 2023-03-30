@@ -22,5 +22,11 @@
     <ClInclude Include="Questions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="generateLevels.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="variables.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

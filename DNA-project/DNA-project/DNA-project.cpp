@@ -4,6 +4,7 @@
 #include "Main.h"
 
 
+
 const int screenWidth = 1920;
 const int screenHeight = 1080;
 const int levelsCount = 10;
@@ -11,40 +12,7 @@ const int levelWidth = 80;
 const int levelHeight = 80;
 const int levelPadding = 20;
 
-struct Level {
-    Rectangle rect;
-    int number;
-};
 
-std::vector<Level> levels;
-
-const int MAX_QUESTIONS = 3;
-
-struct Question {
-    std::string text;
-    std::string options[4];
-    int correctAnswer;
-};
-
-Question questions[MAX_QUESTIONS] = {
-    {"What is the largest organ in the human body?", {"Liver", "Heart", "Skin", "Brain"}, 3},
-    {"What is the powerhouse of the cell?", {"Ribosome", "Nucleus", "Mitochondria", "Golgi Apparatus"}, 3},
-    {"What is the smallest bone in the human body?", {"Stapes", "Coccyx", "Femur", "Radius"}, 1}
-};
-
-void generateLevels() {
-    int x = (screenWidth - (levelsCount * levelWidth) - ((levelsCount - 1) * levelPadding)) / 2;
-    int y = (screenHeight - levelHeight) / 2;
-    for (int i = 0; i < levelsCount; i++) {
-        Level level;
-        level.rect.x = x + (i * (levelWidth + levelPadding));
-        level.rect.y = y;
-        level.rect.width = levelWidth;
-        level.rect.height = levelHeight;
-        level.number = i + 1;
-        levels.push_back(level);
-    }
-}
 
 void drawLevels() {
     for (int i = 0; i < levelsCount; i++) {

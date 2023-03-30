@@ -6,4 +6,6 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+#include "variables.h"
+#include "Questions.h"
 

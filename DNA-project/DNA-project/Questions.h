@@ -1,27 +1,26 @@
-#pragma once
+#pragma once;
+
+#include "Main.h"
 
 
-#include "raylib.h"
 
-#define MAX_QUESTIONS 4
-#define MAX_OPTIONS 4
-
-typedef struct Question {
-    char text[256];
-    char options[MAX_OPTIONS][128];
-    int correctOption;
-} Question;
-
-
-static int currentQuestionIndex = 0;
-static int currentScore = 0;
-
-static Question questions[MAX_QUESTIONS] = {
-    {"What is the largest organ in the human body?", {"Heart", "Brain", "Skin", "Liver"}, 2},
-    {"What is the powerhouse of the cell?", {"Mitochondria", "Nucleus", "Ribosome", "Lysosome"}, 0},
-    {"What is the process by which plants convert light energy into food called?", {"Photosynthesis", "Respiration", "Fermentation", "Digestion"}, 0},
-    {"What is the name of the process by which DNA is copied?", {"Transcription", "Translation", "Replication", "Mutation"}, 2}
+struct Level {
+    Rectangle rect;
+    int number;
 };
 
+std::vector<Level> levels;
 
+const int MAX_QUESTIONS = 3;
 
+struct Question {
+    std::string text;
+    std::string options[4];
+    int correctAnswer;
+};
+
+Question questions[MAX_QUESTIONS] = {
+    {"What is the largest organ in the human body?", {"Liver", "Heart", "Skin", "Brain"}, 3},
+    {"What is the powerhouse of the cell?", {"Ribosome", "Nucleus", "Mitochondria", "Golgi Apparatus"}, 3},
+    {"What is the smallest bone in the human body?", {"Stapes", "Coccyx", "Femur", "Radius"}, 1}
+};
