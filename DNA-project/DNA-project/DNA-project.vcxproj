@@ -133,6 +133,7 @@
     <ClCompile Include="DNA-project.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="drawLevels_questions.h" />
     <ClInclude Include="generateLevels.h" />
     <ClInclude Include="variables.h" />
     <ClInclude Include="Main.h" />

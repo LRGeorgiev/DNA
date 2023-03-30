@@ -28,5 +28,8 @@
     <ClInclude Include="variables.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="drawLevels_questions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

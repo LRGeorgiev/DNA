@@ -8,4 +8,6 @@
 #include <ctime>
 #include "variables.h"
 #include "Questions.h"
+#include "drawLevels_questions.h"
+#include "generateLevels.h"
 
