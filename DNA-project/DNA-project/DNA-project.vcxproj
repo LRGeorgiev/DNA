@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\raylib\raylib\out\build\x64-Debug\raylib\include;C:\Users\User\Documents\DNA\DNA-project\DNA-project</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Todor Pavlov\raylib\out\build\x64-Debug\raylib\include;C:\Users\Todor Pavlov\source\repos\DNA\DNA-project\DNA-project\askQuestion.h;C:\Users\Todor Pavlov\source\repos\DNA\DNA-project\DNA-project\checkAnswer.h;C:\Users\Todor Pavlov\source\repos\DNA\DNA-project\DNA-project\Questions.h;C:\Users\Todor Pavlov\raylib\out\build\x64-Debug\raylib\raylib.lib;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,8 +133,6 @@
     <ClCompile Include="DNA-project.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="askQuestion.h" />
-    <ClInclude Include="checkAnswer.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="Questions.h" />
   </ItemGroup>

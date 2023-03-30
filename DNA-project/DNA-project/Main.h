@@ -1,6 +1,9 @@
 #pragma once
+
 #include "raylib.h"
-#include <Questions.h>
-#include <askQuestion.h>
-#include <checkAnswer.h>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <cstdlib>
+#include <ctime>
 
