@@ -1,6 +1,6 @@
 
 <p align="center">
-<img align="center" src="file:///C:/Users/Todor%20Pavlov/Downloads/DNA.png" width="350", height="350">
+<img align="center" src="DNA.png" width="350", height="350">
 </p>
 <br>
 <br>
