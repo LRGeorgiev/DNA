@@ -17,7 +17,7 @@
 
 
   <h1>✍ Description </h1>
-  Vis!00 is a newly formed team made up from 4 team members. The goal of the team is to create a game a biology based game for educational purposes.You can download our grame from our release tab!
+  DNA is a newly formed team made up from 4 team members. The goal of the team is to create a game a biology based game for educational purposes.You can download our game from our release tab or by running the executable file.
   
   <h1>How to download</h1>
   You can downlaod our game from the release tab or by cloning the repository and then run DNA.exe
