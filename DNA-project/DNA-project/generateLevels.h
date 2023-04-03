@@ -15,5 +15,6 @@ void generateLevels() {
         level.rect.height = levelHeight;
         level.number = i + 1;
         levels.push_back(level);
+        
     }
 }
