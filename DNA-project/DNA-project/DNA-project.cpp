@@ -1,25 +1,9 @@
 #include "Main.h"
 
-bool showTitleScreen() {
-    bool startGame = false;
-    while (!startGame && !WindowShouldClose()) {
-        BeginDrawing();
-        ClearBackground(RAYWHITE);
 
-        DrawText("Biology quiz", screenWidth / 2 - MeasureText("Biology quiz", 40) / 2, screenHeight / 3, 40, BLACK);
-        DrawText("Press ENTER to start the game", screenWidth / 2 - MeasureText("Press ENTER to start the game", 20) / 2, screenHeight / 2, 20, GREEN);
 
-        if (IsKeyPressed(KEY_ENTER)) {
-            startGame = true;
-        }
+int main(){
 
-        EndDrawing();
-    }
-
-    return startGame;
-}
-
-int main() {
     InitWindow(screenWidth, screenHeight, "Biology quiz");
 
     SetTargetFPS(60);
@@ -34,11 +18,14 @@ int main() {
 
     if (showTitleScreen()) {
         while (!WindowShouldClose()) {
-            if (!isQuestionDisplayed) {
+            if (!isQuestionDisplayed && currentLevelIndex < levelsCount) {
                 BeginDrawing();
                 ClearBackground(RAYWHITE);
 
                 drawLevels();
+
+                // Add exit button
+                DrawText("Press Esc to exit", 10, screenHeight - 30, 20, BLACK);
 
                 if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
                     for (int i = 0; i < levelsCount; i++) {
@@ -52,16 +39,20 @@ int main() {
 
                 EndDrawing();
             }
-            else {
+            else if (currentLevelIndex < levelsCount) {
                 BeginDrawing();
                 drawQuestion(questions[currentQuestionIndex]);
+
+                // Add exit button
+                DrawText("Press Esc to exit", 10, screenHeight - 30, 20, BLACK);
+
                 if (IsKeyPressed(KEY_ONE)) {
                     if (checkAnswer(questions[currentQuestionIndex], 1)) {
                         currentScore++;
                         levels[currentLevelIndex].rect.width = 0;
                         levels[currentLevelIndex].rect.height = 0;
                     }
-                    isQuestionDisplayed = false;
+                    hasAnsweredQuestion = true;
                 }
                 else if (IsKeyPressed(KEY_TWO)) {
                     if (checkAnswer(questions[currentQuestionIndex], 2)) {
@@ -69,7 +60,7 @@ int main() {
                         levels[currentLevelIndex].rect.width = 0;
                         levels[currentLevelIndex].rect.height = 0;
                     }
-                    isQuestionDisplayed = false;
+                    hasAnsweredQuestion = true;
                 }
                 else if (IsKeyPressed(KEY_THREE)) {
                     if (checkAnswer(questions[currentQuestionIndex], 3)) {
@@ -77,7 +68,7 @@ int main() {
                         levels[currentLevelIndex].rect.width = 0;
                         levels[currentLevelIndex].rect.height = 0;
                     }
-                    isQuestionDisplayed = false;
+                    hasAnsweredQuestion = true;
                 }
                 else if (IsKeyPressed(KEY_FOUR)) {
                     if (checkAnswer(questions[currentQuestionIndex], 4)) {
@@ -85,14 +76,41 @@ int main() {
                         levels[currentLevelIndex].rect.width = 0;
                         levels[currentLevelIndex].rect.height = 0;
                     }
-                    isQuestionDisplayed = false;
+                    hasAnsweredQuestion = true;
                 }
+
+                if (hasAnsweredQuestion) {
+                    currentLevelIndex++;
+                    currentQuestionIndex = getRandomQuestionIndex();
+                    isQuestionDisplayed = false;
+                    hasAnsweredQuestion = false;
+                }
+
                 EndDrawing();
             }
+            else {
+                // End game screen
+                BeginDrawing();
+                ClearBackground(RAYWHITE);
+
+                DrawText("You finished!", screenWidth / 2 - 100, screenHeight / 2 - 50, 40, BLACK);
+            
+                DrawText("Press Esc to exit", 10, screenHeight - 30, 20, BLACK);
+
+                EndDrawing();
+
+                // Add exit functionality
+                if (IsKeyPressed(KEY_ESCAPE)) {
+                    break;
+                }
+            }
         }
-    }
+
 
     CloseWindow();
 
     return 0;
 }
+
+    
+	}

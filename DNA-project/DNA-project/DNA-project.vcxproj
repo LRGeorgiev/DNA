@@ -140,6 +140,7 @@
     <ClInclude Include="drawLevels_questions.h" />
     <ClInclude Include="generateLevels.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="showTitleScreen.h" />
     <ClInclude Include="variables.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="Questions.h" />
@@ -149,7 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\..\Downloads\DNA.ico" />
-    <Image Include="..\..\..\..\Downloads\DNA.png" />
+    <Image Include="..\..\..\..\Downloads\background.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

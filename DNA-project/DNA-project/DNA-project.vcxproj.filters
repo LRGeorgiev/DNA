@@ -9,7 +9,7 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Resources">
+    <Filter Include="resources">
       <UniqueIdentifier>{cd215a20-334f-434b-b64a-a2a4f80bb23a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -37,12 +37,17 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="showTitleScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\..\Downloads\DNA.png" />
     <Image Include="..\..\..\..\Downloads\DNA.ico" />
+    <Image Include="..\..\..\..\Downloads\background.png">
+      <Filter>Source Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
