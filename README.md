@@ -6,10 +6,10 @@
 <br>
 <br>
 <p align = "center">
-<img src = "https://img.shields.io/github/languages/count/krasimiraruseva1/DNA?style=for-the-badge">
-<img src = "https://img.shields.io/github/contributors/krasimiraruseva1/DNA?style=for-the-badge">
-<img src = "https://img.shields.io/github/repo-size/krasimiraruseva1/DNA?style=for-the-badge">
-<img src = "https://img.shields.io/github/last-commit/krasimiraruseva1/DNA?style=for-the-badge">
+<img src = "https://img.shields.io/github/languages/count/LRGeorgiev/DNA?style=for-the-badge">
+<img src = "https://img.shields.io/github/contributors/LRGeorgiev/DNA?style=for-the-badge">
+<img src = "https://img.shields.io/github/repo-size/LRGeorgiev/DNA?style=for-the-badge">
+<img src = "https://img.shields.io/github/last-commit/LRGeorgiev/DNA?style=for-the-badge">
 
 </p>
 <br>
