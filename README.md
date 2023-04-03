@@ -18,6 +18,11 @@
 
   <h1>✍ Description </h1>
   Vis!00 is a newly formed team made up from 4 team members. The goal of the team is to create a game a biology based game for educational purposes.You can download our grame from our release tab!
+  
+  <h1>How to download</h1>
+  You can downlaod our game from the release tab or by cloning the repository and then run DNA.exe
+  
+  
   <h1>🤝 Our Team </h1>
   <p>
   
@@ -47,6 +52,9 @@
 	
 
   </p>
+  
+  <h1>Game preview</h1>
+<a href="https://ibb.co/4tZ7Fnz"><img src="https://i.ibb.co/F3bKhL2/image-2023-04-03-143637006.png" alt="image-2023-04-03-143637006" border="0"></a>
 	
    
    <h1>📝 Documents</h1>
