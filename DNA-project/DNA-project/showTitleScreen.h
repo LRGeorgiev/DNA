@@ -13,14 +13,20 @@ bool showTitleScreen() {
         BeginDrawing();
         ClearBackground(RAYWHITE);
 
-        // Draw the title of the game
+        // Draw a rectangle around the title of the game
+        DrawRectangleLines(screenWidth / 2 - MeasureText("Biology quiz", 40) / 2 - 10, screenHeight / 3 - 10, MeasureText("Biology quiz", 40) + 20, 60, BLACK);
+        // Draw the title of the game inside the rectangle
         DrawText("Biology quiz", screenWidth / 2 - MeasureText("Biology quiz", 40) / 2, screenHeight / 3, 40, BLACK);
 
-        // Draw the prompt to start the game
+        // Draw a rectangle around the prompt to start the game
+        DrawRectangleLines(screenWidth / 2 - MeasureText("Press ENTER to start the game", 20) / 2 - 10, screenHeight / 2 - 10, MeasureText("Press ENTER to start the game", 20) + 20, 40, BLACK);
+        // Draw the prompt to start the game inside the rectangle
         DrawText("Press ENTER to start the game", screenWidth / 2 - MeasureText("Press ENTER to start the game", 20) / 2, screenHeight / 2, 20, GREEN);
 
-        // Draw the prompt to show instructions
-        DrawText("Press I for instructions", screenWidth / 2 - MeasureText("Press I for instructions", 20) / 2, screenHeight / 2 + 50, 20, MAROON);
+        // Draw a rectangle around the prompt to show instructions
+        DrawRectangleLines(screenWidth / 2 - MeasureText("Press I for instructions", 20) / 2 - 10, screenHeight / 2 + 40 - 10, MeasureText("Press I for instructions", 20) + 20, 40, BLACK);
+        // Draw the prompt to show instructions inside the rectangle
+        DrawText("Press I for instructions", screenWidth / 2 - MeasureText("Press I for instructions", 20) / 2, screenHeight / 2 + 40, 20, MAROON);
 
         // Check for user input to start the game or show instructions
         if (IsKeyPressed(KEY_ENTER)) {
@@ -34,21 +40,30 @@ bool showTitleScreen() {
         // If the user wants to show instructions, display them and wait for confirmation to return to the title screen
         if (showInstructions) {
             ClearBackground(RAYWHITE);
-            DrawText("Instructions:", 10, 10, 30, BLACK);
-            DrawText("- Click on the level to show the question", 10, 60, 20, BLACK);
-            DrawText("- Answer questions by selecting the corresponding number", 10, 90, 20, BLACK);
-            DrawText("- Each correct answer earns you a point", 10, 120, 20, BLACK);
 
-            // Wait for the user to confirm they've read the instructions before returning to the title screen
-            if (IsKeyPressed(KEY_ENTER)) {
-                showInstructions = false;
-            }
-        }
+            // Draw a rectangle around the instructions
+            DrawRectangleLines(10, 10, screenWidth - 20, screenHeight - 20, BLACK);
+            DrawText("Instructions:", 20, 20, 30, BLACK);
+            DrawText("- Click on the level to show the question", 20, 70, 20, BLACK);
+            DrawText("- Answer questions by selecting the corresponding number", 20, 100, 20, BLACK);
+            DrawText("- Each correct answer earns you a point", 20, 130, 20, BLACK);
 
-        EndDrawing();
-    }
+            // Draw a prompt to confirm the user has read the instructions
+            DrawText("Press C to close the instructionns", screenWidth / 2 - MeasureText("Press ENTER to return to the title screen", 20) / 2, screenHeight - 60, 20, BLACK);
 
-    // Return whether the user has chosen to start the game or not
-    return startGame;
+            // Wait for the user to confirm they've read the instructions before returning to the
+
+			// title screen
+
+			if (IsKeyPressed(KEY_C)) {
+				showInstructions = false;
+			}
+		}
+
+		EndDrawing();
+	}
+
+	// Return the startGame flag
+	return startGame;
+
 }
-

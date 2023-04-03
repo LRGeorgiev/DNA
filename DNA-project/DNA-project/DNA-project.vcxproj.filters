@@ -16,10 +16,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Main.h">
+    <ClInclude Include="main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Questions.h">
+    <ClInclude Include="questions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="generateLevels.h">
@@ -34,5 +34,10 @@
     <ClInclude Include="showTitleScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\Downloads\background.png">
+      <Filter>Source Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

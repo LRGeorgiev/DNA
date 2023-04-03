@@ -141,8 +141,11 @@
     <ClInclude Include="generateLevels.h" />
     <ClInclude Include="showTitleScreen.h" />
     <ClInclude Include="variables.h" />
-    <ClInclude Include="Main.h" />
-    <ClInclude Include="Questions.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="questions.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\Downloads\background.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
