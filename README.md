@@ -26,7 +26,7 @@
   <h1>🤝 Our Team </h1>
   <p>
   
-1. **Lubomir Georgiev** - **Scrum trainer**	
+1. **Lubomir Georgiev** - **Scrum Trainer**	
    > ***GitHub profile***: [***LRGeorgiev***](https://github.com/LRGeorgiev)	
 
 2. **Krasimira Ruseva** - **Backend Developer** 
@@ -40,7 +40,7 @@
    
   </p>
   
-  <h1>🚀 Used technologies</h1>
+  <h1>🚀 Used Technologies</h1>
   <p align="left"> 
 	<a> <img src="https://img.icons8.com/ios-filled/50/4a90e2/c-plus-plus-logo.png"/> </a> 
 	<a href="https://imgbb.com/"><img src="https://i.ibb.co/RNyL3Cm/rsz-raylib-logo.png" alt="rsz-raylib-logo" border="0"></a>
