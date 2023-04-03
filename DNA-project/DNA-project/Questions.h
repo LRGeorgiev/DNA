@@ -38,4 +38,3 @@ Question questions[MAX_QUESTIONS] = {
 {"What is the name of the part of the brain responsible for regulating body temperature?", {"Hypothalamus", "Cerebellum", "Thalamus", "Medulla oblongata"}, 1}
 };
 
-// Note: These code comments provide an explanation for the purpose of each data structure and variable used in the code.

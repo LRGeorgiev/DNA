@@ -3,8 +3,8 @@
 
 #include "Main.h"
 // Set screen size
-const int screenWidth = 1920;
-const int screenHeight = 1080;
+const int screenWidth = 1600;
+const int screenHeight = 900;
 
 // Define the number of levels and the size of each level
 const int levelsCount = 10;

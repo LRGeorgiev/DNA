@@ -4,7 +4,7 @@
 // Main function
 int main() {
     // Initialize the game window
-    InitWindow(screenWidth, screenHeight, "Biology quiz");
+	InitWindow(screenWidth, screenHeight, "DNA Project");
 
     // Set the target frames per second to 60
     SetTargetFPS(60);
@@ -19,10 +19,7 @@ int main() {
         while (!WindowShouldClose()) {
 
             // Toggle fullscreen on F11 key press
-            if (IsKeyPressed(KEY_F11)) {
-                ToggleFullscreen();
-            }
-
+            
             // If a question is not being displayed and the current level is not the last level, draw the level selection screen
             if (!isQuestionDisplayed && currentLevelIndex < levelsCount) {
                 BeginDrawing();

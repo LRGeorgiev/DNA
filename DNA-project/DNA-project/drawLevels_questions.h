@@ -6,7 +6,7 @@
 void drawLevels() {
 	for (int i = 0; i < levelsCount; i++) {
 		// Draw a rectangle for each level
-		DrawRectangleRec(levels[i].rect, RED);
+		DrawRectangleRec(levels[i].rect, DARKPURPLE);
 		// Draw the level number inside the rectangle
 		DrawText(std::to_string(levels[i].number).c_str(), levels[i].rect.x + levelWidth / 2 - MeasureText(std::to_string(levels[i].number).c_str(), 30) / 2, levels[i].rect.y + levelHeight / 2 - 15, 30, BLACK);
 	}
