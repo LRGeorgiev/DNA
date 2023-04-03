@@ -1,6 +1,6 @@
 
 <p align="center">
-<img align="center" src="DNA.png" width="350", height="350">
+<img align="center" src="./Design/DNA.png" width="350", height="350">
 </p>
 <br>
 <br>
@@ -24,7 +24,7 @@
 1. **Lubomir Georgiev** - **Scrum trainer**	
    > ***GitHub profile***: [***LRGeorgiev***](https://github.com/LRGeorgiev)	
 
-2. **Krasimira Ruseva - **Backend Developer** 
+2. **Krasimira Ruseva** - **Backend Developer** 
    > ***GitHub profile***: [***krasimiraruseva1***](https://github.com/krasimiraruseva1)	
 
 3. **Toni Chodzhorova** - **Backend Developer** 
